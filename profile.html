@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        .tag{
+            color:black;
+            font-weight:normal;
+            text-decoration:none;
+        }
+        .tag-selected{
+            color:red;
+            font-weight:bold;
+            text-decoration:none;
+        }
+        .page{
+            display:none;
+        }
+        .page-selected{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span id="profile" onclick="changeToProfile();" class="tag-selected">Profile</span>
+        <span id="exp" onclick="changeToExp();" class="tag">Exp</span>
+        <span id="project" onclick="changeToProject();" class="tag">Project</span>
+    </div>
+    <div id="profilepage">
+        <h3>profile</h3>
+        content
+    </div>
+    <div id="exppage">
+        <h3>Exp</h3>
+        content
+    </div>
+    <div id="projectpage">
+        <h3>project</h3>
+        content
+    </div>
+    <script>
+        let profile=document.querySelector("#profile")
+        function changeToProfile(){
+            project.className="tag";
+            exp.className="tag";
+            profile.className="tag-selected";
+            projectpge.style.display="none";
+            exppage.style.display="none";
+            profilepage.style.display="block";
+        }
+        function changeToProject(){
+            profile.className="tag";
+            exp.className="tag";
+            project.className="tag-selected";
+            projectpge.style.display="none";
+            exppage.style.display="block";
+            profilepage.style.display="none";
+        }
+        function changeToExp(){
+            project.className="tag";
+            profile.className="tag";
+            exp.className="tag-selected";
+            projectpge.style.display="block";
+            exppage.style.display="none";
+            profilepage.style.display="none";
+        }
+    </script>
+</body>
+</html>
